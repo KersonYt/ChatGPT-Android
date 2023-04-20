@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353541"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/apiToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/round_card"
+        android:hint="API Token"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="17dp" />
+
+    <LinearLayout
+        android:id="@+id/finalResultContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/scroll_view"
+        android:layout_below="@+id/apiToken"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_card"
+        android:orientation="vertical"
+        android:padding="5dp" />
+
+    <ImageView
+        android:id="@+id/deleteAll"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@id/finalResultContainer"
+        android:layout_alignBottom="@id/finalResultContainer"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_delete" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:isScrollContainer="false">
+
+        <EditText
+            android:id="@+id/inputPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_card"
+            android:hint="Escribe aquí"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="65dp"
+            android:paddingBottom="5dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="17dp" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/sendAudio"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@id/scroll_view"
+        android:layout_alignEnd="@id/scroll_view"
+        android:layout_alignBottom="@id/scroll_view"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ic_radio" />
+
+    <ImageView
+        android:id="@+id/sendPropmt"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@id/scroll_view"
+        android:layout_alignBottom="@id/scroll_view"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/sendAudio"
+        android:src="@drawable/ic_send" />
+
+    <ImageView
+        android:id="@+id/recording_indicator"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/round_card_white"
+        android:visibility="gone" />
+
+</RelativeLayout>
